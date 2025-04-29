@@ -1,0 +1,229 @@
+/* MENU DẠNG CÂY */
+
+/* ======= CẤU TRÚC BỐ CỤC (LAYOUT) ======= */
+#left ul.nav {
+    margin-bottom: 2px;
+    font-size: 12px; /* Cỡ chữ cho menu */
+}
+
+#left ul.nav ul,
+#left ul.nav ul li {
+    list-style: none!important; /* Loại bỏ dấu chấm/dấu gạch đầu dòng */
+    list-style-type: none!important;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+#left ul.nav ul {
+    padding-left: 0; /* Căn chỉnh khoảng cách bên trái */
+    width: auto;
+}
+
+#left ul.nav ul.children {
+    padding-left: 12px; /* Căn lề cho menu con */
+    width: auto;
+}
+
+#left ul.nav ul.children li {
+    margin-left: 0px;
+}
+
+#left ul.nav li a:hover {
+    text-decoration: none; /* Loại bỏ gạch chân khi rê chuột */
+}
+
+/* Mục menu đang được chọn */
+#left ul.nav li.current > a .lbl {
+    background-color: #999;
+    color: #fff!important;
+}
+
+/* ======= PHẦN TỬ CHA (PARENT ITEM) ======= */
+#left ul.nav li.parent a {
+    padding: 0px;
+    color: #ccc; /* Màu chữ cho mục cha */
+}
+
+#left ul.nav > li.parent > a {
+    border: solid 1px #999; /* Viền của mục cha */
+    text-transform: uppercase; /* Viết hoa chữ */
+}    
+
+/* ======= ĐƯỜNG DẪN (LINK) ======= */
+#left ul.nav li.parent ul li a {
+    width: 100%;
+    color: #222; /* Màu chữ */
+    border: none;
+    display: flex;
+    padding-left: 5px;    
+}
+
+/* ======= BIỂU TƯỢNG (SIGN) CHO MỤC CHA ======= */
+#left ul.nav li.parent > a {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 15px; /* Khoảng cách nội dung bên trong */
+    text-decoration: none;
+    color: #333;
+}
+
+/* Căn giữa icon trong dấu hiệu mở rộng */
+#left ul.nav li .sign {
+    display: flex;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    color: white;
+    font-size: 12px; /* Kích thước icon */
+    margin-right: 10px; /* Khoảng cách giữa icon và chữ */
+    background-color: transparent;
+}
+
+#left ul.nav li.parent > a > .sign {
+    margin-left: 0px;
+    background-color: #999;
+}
+
+/* ======= NHÃN (LABEL) ======= */
+#left ul.nav li .lbl {
+    padding: 5px 12px;
+    display: inline-block;
+}
+
+#left ul.nav li.current > a > .lbl {
+    color: #fff;
+}
+
+#left ul.nav li a .lbl {
+    font-size: 16px;
+}
+
+/* ======= CÁC CHỦ ĐỀ (THEMATIQUE) ======= */
+
+/* CHỦ ĐỀ 1 - MÀU CAM */
+#left ul.nav > li.item-1.parent > a {
+    border: solid 1px #ff6307;
+}
+
+#left ul.nav > li.item-1.parent > a > .sign,
+#left ul.nav > li.item-1 li.parent > a > .sign {
+    margin-left: 0px;
+    background-color: #ff6307;
+}
+
+#left ul.nav > li.item-1 .lbl {
+    color: #ff6307;
+}
+
+#left ul.nav > li.item-1 li.current > a .lbl {
+    background-color: #ff6307;
+    color: #fff!important;
+}
+
+/* CHỦ ĐỀ 2 - MÀU ĐỎ */
+#left ul.nav {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 8px;
+}
+
+#left ul.nav > li.cat-level-1 {
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+#left ul.nav > li.cat-level-1.parent > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#left ul.nav > li.cat-level-1.parent > a:hover {
+    background: #218838;
+}
+#left ul.nav > li.cat-level-1 .children {
+    padding-left: 15px;
+    margin-top: 5px;
+}
+#left ul.nav > li.cat-level-1 li a {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+#left ul.nav > li.cat-level-1 li a:hover {
+    width: 220px;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+#left ul.nav > li.cat-level-1.parent > a > .sign,
+#left ul.nav > li.cat-level-1 li.parent > a > .sign {
+    font-weight: bold;
+    margin-left: 0px;
+    background-color: #28a745;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+#left ul.nav > li.cat-level-1 .lbl {
+    font-size: 20px;
+    color: #fff;
+}
+
+#left ul.nav > li.cat-level-1 .lbl1 {
+    color: #000;
+    font-size: 15px;
+}
+
+#left ul.nav > li.cat-level-1 li.current > a .lbl {
+    background-color: #28a745;
+    color: white !important;
+}
+
+/* CHỦ ĐỀ 3 - MÀU XANH LÁ */
+#left ul.nav > li.item-15.parent > a {
+    border: solid 1px #94cf00;
+}
+
+#left ul.nav > li.item-15.parent > a > .sign,
+#left ul.nav > li.item-15 li.parent > a > .sign {
+    margin-left: 0px;
+    background-color: #94cf00;
+}
+
+#left ul.nav > li.item-15 .lbl {
+    color: #94cf00;
+}
+
+#left ul.nav > li.item-15 li.current > a .lbl {
+    background-color: #94cf00;
+    color: #fff!important;
+}
+
+/* CHỦ ĐỀ 4 - MÀU HỒNG */
+#left ul.nav > li.item-22.parent > a {
+    border: solid 1px #ef409c;
+}
+
+#left ul.nav > li.item-22.parent > a > .sign,
+#left ul.nav > li.item-22 li.parent > a > .sign {
+    margin-left: 0px;
+    background-color: #ef409c;
+}
+
+#left ul.nav > li.item-22 .lbl {
+    color: #ef409c;
+}
+
+#left ul.nav > li.item-22 li.current > a .lbl {
+    background-color: #ef409c;
+    color: #fff!important;
+}
